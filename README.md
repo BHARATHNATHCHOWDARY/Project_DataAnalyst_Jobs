@@ -127,10 +127,11 @@ ORDER BY
 
 ![Alt text](https://github.com/BHARATHNATHCHOWDARY/Project_DataAnalyst_Jobs/blob/main/assests/6img.png)
 
-### For more insights check them out here ###
+### For more Queries & insights check them out here ###
 
 🔍Insights for the Queries check them out here detailed: [Project_DataAnalyst_Jobs_Insights](/Project_DataAnalyst_Jobs_Insights/)
 
+🔍SQL Queries Check them out here: [Project_DataAnalyst_Jobs](/Project_DataAnalyst_Jobs/)
  
 # What I learned 📚✨ 
 
