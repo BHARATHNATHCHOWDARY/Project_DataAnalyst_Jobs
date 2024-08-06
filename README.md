@@ -64,6 +64,12 @@ LIMIT 10;
 ```
 Here's the breakdown of the top data analyst jobs:
 
+- **Distribution of Salaries:** The histogram shows the distribution of average annual salaries for the jobs listed. The data is positively skewed, indicating a higher frequency of lower to mid-range salaries, with fewer jobs offering extremely high salaries.
+
+![Alt text]()
+ 
+- **Top 10 Companies by Average Salary:** This bar chart shows the top 10 companies offering the highest average annual salaries. The companies are ranked based on the average salary for the jobs listed.
+- **Top 10 Job Titles by Average Salary** This bar chart displays the top 10 job titles with the highest average annual salaries. The jobs are ranked by the average salary associated with each title.
 
  
 # What I learned
