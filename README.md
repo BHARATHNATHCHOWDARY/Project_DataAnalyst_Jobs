@@ -71,6 +71,52 @@ Here's the breakdown of the top data analyst jobs:
 - **Top 10 Companies by Average Salary:** This bar chart shows the top 10 companies offering the highest average annual salaries. The companies are ranked based on the average salary for the jobs listed.
 - **Top 10 Job Titles by Average Salary** This bar chart displays the top 10 job titles with the highest average annual salaries. The jobs are ranked by the average salary associated with each title.
 
+  ### 2. Top Paying Data Analyst Jobs with Skills
+  This section presents the top-paying data analyst jobs along with the essential skills required for each position. By querying job postings and company data, we identify the highest average annual salaries for data analyst roles and provide details on the companies offering these positions. Additionally, we list the specific skills associated with each high-paying job, offering valuable insights for job seekers aiming to enhance their skill sets and target lucrative opportunities in the market.
+
+```sql
+WITH Top_Paying_Skills_jobs AS
+
+(SELECT
+    job_id,
+    name as company_name,
+    job_title,
+    salary_year_avg
+FROM  
+    job_postings_fact jpf
+JOIN
+    company_dim cd
+ON jpf.company_id=cd.company_id
+where 
+    salary_year_avg is not null 
+    and job_title_short='Data Analyst'
+    and job_location='Anywhere'
+ORDER BY
+    salary_year_avg DESC
+limit 10    
+)
+
+select
+    tpsj.*,
+    skills
+FROM
+    Top_Paying_Skills_jobs tpsj
+JOIN
+    skills_job_dim sjd
+ON  tpsj.job_id=sjd.job_id
+JOIN 
+    skills_dim sd
+ON  sjd.skill_id=sd.skill_id
+ORDER BY 
+    salary_year_avg DESC    
+```
+- **Top Companies by Average Salary:** The bar chart shows the top 10 companies offering the highest average salaries.This can help job seekers target these companies for better salary prospects.
+- **Most In-Demand Skills:** The bar chart illustrates the top 10 skills most frequently required for high-paying jobs.Skills like SQL, Python, and R are among the top, highlighting their importance in the job market.
+- **Salary Distribution by Job Title:** The boxplot provides an overview of the salary distribution for different job titles. It
+shows the variation in salaries for each title, which can help in understanding the
+potential earnings for different positions.
+
+
  
 # What I learned
 # Conclusions
